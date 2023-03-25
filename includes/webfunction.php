@@ -12,7 +12,6 @@ function getLSPnav()
         echo "<a href='sanpham.php?loaisanpham=$idlsp' class='list-group-item list-group-item-action'>$tenlsp</a>";
     }
 }
-
 //lấy hãng sản xuất
 function getHSXnav()
 {
@@ -25,7 +24,6 @@ function getHSXnav()
         echo "<a href='sanpham.php?hangsanxuat=$idhsx' class='list-group-item list-group-item-action'>$tennsx</a>";
     }
 }
-
 //lấy sản phẩm mới nhất theo id
 function getSPmoi()
 {
@@ -51,9 +49,6 @@ function getSPmoi()
         </div>";
     }
 }
-
-
-
 //lấy tất cả sản phẩm //sanpham.php
 function getSPall()
 {
@@ -216,8 +211,8 @@ function product_details()
                                         <span>$ $giasp</span>
                                     </div>
                                     <div class='fs-5 mb-5'>
-                                        <span>$tenlsp</span><br/>
-                                        <span>$tenhsx</span>
+                                        <span>Loại sản phẩm: $tenlsp</span><br/>
+                                        <span>Hãng sản xuất: $tenhsx</span>
                                     </div>
                                     <p class='lead'>$noidung</p>
                                     <div class='d-flex'>
@@ -231,49 +226,15 @@ function product_details()
                             </div>
                         </div>
                     </section>";
+                    related_products();
                 }
             }
         }
-        related_products();
+        
     }
 }
 
 //sản phẩm liên quan
-
-// function related_products()
-// {
-//     global $con;
-//     if (isset($_GET['idlsp']) && isset($_GET['idsp'])) {
-//     $cate_id = mysqli_real_escape_string($con, $_GET['idlsp']);
-//     $product_id = mysqli_real_escape_string($con, $_GET['idlsp']);
-//     $sql = "SELECT * FROM sanpham WHERE idLSP ='$cate_id' and idSP != '$product_id' LIMIT 6";
-//     $rs = mysqli_query($con, $sql);
-//     if ($rs) {
-//         while ($row_data = mysqli_fetch_assoc($rs)) {
-//             $idsp = $row_data['idSP'];
-//             $tensp = $row_data['TenSP'];
-//             $hinhsp = $row_data['HinhSP'];
-//             $giasp = $row_data['GiaSP'];
-//             echo "
-//             <div class='col mb-4'>
-//                 <div class='card h-100'>
-//                     <img class='card-img-top' src='./Admin/products_image/$hinhsp' alt='...' style='width:100%; height:45%;'/>
-//                     <div class='card-body p-4'>
-//                         <div class='text-center'>
-//                             <h5 class='fw-bolder'>$tensp</h5>
-//                             $giasp
-//                         </div>
-//                     </div>
-//                     <!-- Product actions-->
-//                     <div class='card-footer p-4 pt-0 border-top-0 bg-transparent'>
-//                         <div class='text-center'><a class='btn btn-outline-dark mt-auto' href='#'>View options</a></div>
-//                     </div>
-//                     </div>
-//                 </div>";
-//         }}}
-
-// }
-
 function related_products()
 {
     global $con;
