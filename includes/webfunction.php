@@ -44,7 +44,7 @@ function getSPmoi()
                 <h4 class='card-title' style='color: red;'>$tensp</h4>
                 <p class='card-text'>Giá: $giasp $</p>
             </div>
-            <a href='chitietsanpham.php?idsp=$idsp?idlsp=$idlsp?idlsp=$idhsx' class='btn btn-secondary' style='margin-top: 10px; margin-bottom:10px'>Chi tiết sản phẩm</a>
+            <a href='chitietsanpham.php?idsp=$idsp?idlsp=$idlsp?idhsx=$idhsx' class='btn btn-secondary' style='margin-top: 10px; margin-bottom:10px'>Chi tiết sản phẩm</a>
             <a href='' class='btn btn-primary' style='margin-top: 10px; margin-bottom:10px'>Thêm vào giỏ</a>
         </div>";
     }
@@ -60,19 +60,19 @@ function getSPall()
             $rs = mysqli_query($con, $sql);
             while ($row_data = mysqli_fetch_assoc($rs)) {
                 $idsp = $row_data['idSP'];
-        $tensp = $row_data['TenSP'];
-        $hinhsp = $row_data['HinhSP'];
-        $giasp = $row_data['GiaSP'];
-        $idhsx = $row_data['idHSX'];
-        $noidung = $row_data['NoiDung'];
-        $idlsp = $row_data['idLSP'];
+                $tensp = $row_data['TenSP'];
+                $hinhsp = $row_data['HinhSP'];
+                $giasp = $row_data['GiaSP'];
+                $idhsx = $row_data['idHSX'];
+                $noidung = $row_data['NoiDung'];
+                $idlsp = $row_data['idLSP'];
                 echo "<div class='card' style='width:200px; margin-left: 10px; margin-top:10px;'>
             <img class='card-img-top' src='./Admin/products_image/$hinhsp' alt='Card image' style='width:100%; height:45%; margin-top: 10px;'>
             <div class='card-body'>
                 <h4 class='card-title' style='color: red;'>$tensp</h4>
                 <p class='card-text'>Giá: $giasp $</p>
             </div>
-            <a href='chitietsanpham.php?idsp=$idsp?idlsp=$idlsp?idlsp=$idhsx' class='btn btn-secondary' style='margin-top: 10px; margin-bottom:10px'>Chi tiết sản phẩm</a>
+            <a href='chitietsanpham.php?idsp=$idsp?idlsp=$idlsp?idhsx=$idhsx' class='btn btn-secondary' style='margin-top: 10px; margin-bottom:10px'>Chi tiết sản phẩm</a>
             <a href='' class='btn btn-primary' style='margin-top: 10px; margin-bottom:10px'>Thêm vào giỏ</a>
         </div>";
             }
@@ -94,19 +94,19 @@ function getSPtheoloai()
         }
         while ($row_data = mysqli_fetch_assoc($rs)) {
             $idsp = $row_data['idSP'];
-        $tensp = $row_data['TenSP'];
-        $hinhsp = $row_data['HinhSP'];
-        $giasp = $row_data['GiaSP'];
-        $idhsx = $row_data['idHSX'];
-        $noidung = $row_data['NoiDung'];
-        $idlsp = $row_data['idLSP'];
+            $tensp = $row_data['TenSP'];
+            $hinhsp = $row_data['HinhSP'];
+            $giasp = $row_data['GiaSP'];
+            $idhsx = $row_data['idHSX'];
+            $noidung = $row_data['NoiDung'];
+            $idlsp = $row_data['idLSP'];
             echo "<div class='card' style='width:200px; margin-left: 10px; margin-top:10px;'>
             <img class='card-img-top' src='./Admin/products_image/$hinhsp' alt='Card image' style='width:100%; height:50%; margin-top: 10px;'>
             <div class='card-body'>
                 <h4 class='card-title' style='color: red;'>$tensp</h4>
                 <p class='card-text'>Giá: $giasp $</p>
             </div>
-            <a href='chitietsanpham.php?idsp=$idsp?idlsp=$idlsp?idlsp=$idhsx' class='btn btn-secondary' style='margin-top: 10px; margin-bottom:10px'>Chi tiết sản phẩm</a>
+            <a href='chitietsanpham.php?idsp=$idsp?idlsp=$idlsp?idhsx=$idhsx' class='btn btn-secondary' style='margin-top: 10px; margin-bottom:10px'>Chi tiết sản phẩm</a>
             <a href='' class='btn btn-primary' style='margin-top: 10px; margin-bottom:10px'>Thêm vào giỏ</a>
         </div>";
         }
@@ -127,19 +127,19 @@ function getSPtheohang()
         }
         while ($row_data = mysqli_fetch_assoc($rs)) {
             $idsp = $row_data['idSP'];
-        $tensp = $row_data['TenSP'];
-        $hinhsp = $row_data['HinhSP'];
-        $giasp = $row_data['GiaSP'];
-        $idhsx = $row_data['idHSX'];
-        $noidung = $row_data['NoiDung'];
-        $idlsp = $row_data['idLSP'];
+            $tensp = $row_data['TenSP'];
+            $hinhsp = $row_data['HinhSP'];
+            $giasp = $row_data['GiaSP'];
+            $idhsx = $row_data['idHSX'];
+            $noidung = $row_data['NoiDung'];
+            $idlsp = $row_data['idLSP'];
             echo "<div class='card' style='width:200px; margin-left: 10px; margin-top:10px;'>
             <img class='card-img-top' src='./Admin/products_image/$hinhsp' alt='Card image' style='width:100%; height:50%; margin-top: 10px;'>
             <div class='card-body'>
                 <h4 class='card-title' style='color: red;'>$tensp</h4>
                 <p class='card-text'>Giá: $giasp $</p>
             </div>
-            <a href='chitietsanpham.php?idsp=$idsp?idlsp=$idlsp?idlsp=$idhsx' class='btn btn-secondary' style='margin-top: 10px; margin-bottom:10px'>Chi tiết sản phẩm</a>
+            <a href='chitietsanpham.php?idsp=$idsp?idlsp=$idlsp?idhsx=$idhsx' class='btn btn-secondary' style='margin-top: 10px; margin-bottom:10px'>Chi tiết sản phẩm</a>
             <a href='' class='btn btn-primary' style='margin-top: 10px; margin-bottom:10px'>Thêm vào giỏ</a>
         </div>";
         }
@@ -171,7 +171,7 @@ function search_sp()
                 <h4 class='card-title' style='color: red;'>$tensp</h4>
                 <p class='card-text'>Giá: $giasp $</p>
             </div>
-            <a href='chitietsanpham.php?idsp=$idsp?idlsp=$idlsp?idlsp=$idhsx' class='btn btn-secondary' style='margin-top: 10px; margin-bottom:10px'>Chi tiết sản phẩm</a>
+            <a href='chitietsanpham.php?idsp=$idsp?idlsp=$idlsp?idhsx=$idhsx' class='btn btn-secondary' style='margin-top: 10px; margin-bottom:10px'>Chi tiết sản phẩm</a>
             <a href='' class='btn btn-primary' style='margin-top: 10px; margin-bottom:10px'>Thêm vào giỏ</a>
         </div>";
         }
@@ -200,37 +200,34 @@ function product_details()
                     $noidung = $row_data['NoiDung'];
                     $tenlsp = $row_data['TenLSP'];
                     $tenhsx = $row_data['TenNSX'];
-                    echo "<section class='py-5'>
-                        <div class='container px-4 px-lg-5 my-5'>
-                            <div class='row gx-4 gx-lg-5 align-items-center'>
-                                <div class='col-md-6'><img class='card-img-top mb-5 mb-md-0' src='./Admin/products_image/$hinhsp' alt='...' /></div>
-                                <div class='col-md-6'>
-                                    <div class='small mb-1'>SKU: $idsp</div>
-                                    <h1 class='display-5 fw-bolder'>$tensp</h1>
-                                    <div class='fs-5 mb-5'>
-                                        <span>$ $giasp</span>
-                                    </div>
-                                    <div class='fs-5 mb-5'>
-                                        <span>Loại sản phẩm: $tenlsp</span><br/>
-                                        <span>Hãng sản xuất: $tenhsx</span>
-                                    </div>
-                                    <p class='lead'>$noidung</p>
-                                    <div class='d-flex'>
-                                        <input class='form-control text-center me-3' id='inputQuantity' type='num' value='1' style='max-width: 3rem' />
-                                        <button class='btn btn-outline-dark flex-shrink-0' type='button'>
-                                            <i class='bi-cart-fill me-1'></i>
-                                            Add to cart
-                                        </button>
-                                    </div>
+                    $soluongton = $row_data['Soluong'];
+                    echo "<form class='py-5' action='includes/addcart.php?idsp=$idsp' method='post'>
+                    <div class='container px-4 px-lg-5 my-5'>
+                        <div class='row gx-4 gx-lg-5 align-items-center'>
+                            <div class='col-md-6'><img class='card-img-top mb-5 mb-md-0' src='./Admin/products_image/$hinhsp' alt='...' /></div>
+                            <div class='col-md-6'>
+                                <div class='small mb-1'>SKU: $idsp</div>
+                                <h1 class='display-5 fw-bolder'>$tensp</h1>
+                                <div class='fs-5 mb-5'>
+                                    <span>$ $giasp</span>
+                                </div>
+                                <div class='fs-5 mb-5'>
+                                    <span>Loại sản phẩm: $tenlsp</span><br />
+                                    <span>Hãng sản xuất: $tenhsx</span><br/>
+                                    <span>Số lượng tồn: $soluongton</span>
+                                </div>
+                                <p class='lead'>$noidung</p>
+                                <div class='d-flex'>
+                                    <input class='btn btn-outline-dark flex-shrink-0' type='submit' value='Thêm giỏ hàng' name='addtocart'>
                                 </div>
                             </div>
                         </div>
-                    </section>";
+                    </div>
+                </form>";
                     related_products();
                 }
             }
         }
-        
     }
 }
 
@@ -272,7 +269,3 @@ function related_products()
         }
     }
 }
-
-?>
-
-

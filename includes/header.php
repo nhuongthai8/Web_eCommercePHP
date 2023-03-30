@@ -49,7 +49,7 @@ session_start();
                 }
                 ?>
                 <li class="nav-item">
-                    <a class="nav-link" href="giohang.php">GIỎ HÀNG</a>
+                    <a class="nav-link" href="shoppingcart.php">GIỎ HÀNG</a>
                 </li>
             </ul>
         </div>

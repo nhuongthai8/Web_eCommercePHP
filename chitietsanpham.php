@@ -59,6 +59,42 @@ include("./includes/connectdb.php");
     </div>
     <br>
     <h2 style="text-align: center;">ĐÁNH GIÁ CỦA NGƯỜI DÙNG</h2>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5">
+                <form action="" method="post">
+                    <div class="form-group">
+                        <label for="name">Tên người dùng:</label>
+                        <input type="text" class="form-control" id="name" name="name" required autocomplete="off">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" class="form-control" id="email" name="email" required autocomplete="off">
+                    </div>
+                    <div class="form-group">
+                        <label for="rating">Đánh giá:</label>
+                        <select class="form-control" id="rating" name="rating" required>
+                            <option value="">Select rating</option>
+                            <option value="5">5 stars</option>
+                            <option value="4">4 stars</option>
+                            <option value="3">3 stars</option>
+                            <option value="2">2 stars</option>
+                            <option value="1">1 star</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="review">Review:</label>
+                        <textarea class="form-control" id="review" name="NoiDung" required></textarea>
+                    </div>
+                    <input type="hidden" name="idSP" value="1">
+                    <button type="submit" class="btn btn-primary" style="margin-top: 10px;">Gửi đánh giá</button>
+                </form>
+            </div>
+            <div class="col-md-7">
+
+            </div>
+        </div>
+    </div>
     <br>
     <h2 style="text-align: center;">SẢN PHẨM CÙNG LOẠI</h2>
     <div class="container px-4 px-lg-5 mt-5">
@@ -72,6 +108,8 @@ include("./includes/connectdb.php");
     <?php
     include("includes/footer.php");
     ?>
+        
+
 </body>
 
 </html>
