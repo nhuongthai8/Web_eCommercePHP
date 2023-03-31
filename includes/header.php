@@ -42,6 +42,7 @@ session_start();
                     <a class='nav-link dropdown-toggle' href='#' role='button' data-bs-toggle='dropdown'>".$_SESSION['Username']."</a>
                     <ul class='dropdown-menu'>
                       <li><a class='dropdown-item' href='tintuc.php'>Chỉnh sửa thông tin</a></li>
+                      <li><a class='dropdown-item' href='doimatkhau.php'>Đổi mật khẩu</a></li>
                       <li><hr class='dropdown-divider'></li>
                       <li><a class='dropdown-item' href='./includes/dangxuat.php'>Đăng xuất</a></li>
                     </ul>

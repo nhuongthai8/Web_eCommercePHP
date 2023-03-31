@@ -29,16 +29,6 @@ mysqli_select_db($con, 'webbanhangphp');
 
         </div>
     </div>
-    <nav class="navbar navbar-expand-sm navbar-light bg-light text-black">
-        <ul class="navbar-nav me-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="">WELCOME GUEST</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="dangnhap.php">LOGIN</a>
-            </li>
-        </ul>
-    </nav>
     <!--Navbar-->
     <?php
     include("includes/header.php");

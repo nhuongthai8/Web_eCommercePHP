@@ -1,21 +1,18 @@
 <?php
 $login=0;
 $invalid=0;
-
+session_start();
+include("includes/connectdb.php");
 if($_SERVER['REQUEST_METHOD']=='POST'){
-    include("includes/connectdb.php");
         $usern=$_POST['Username'];
         $pass=md5($_POST['Password']);
-        $hoten=$_POST['HoTen'];
-
-        $sql="select * from `khachhang` where Username='$usern' and Password='$pass'";
+        $sql = "select * from khachhang where Username = '" . $usern . "' and Password = '" . $pass . "' limit 1";
         $result=mysqli_query($con,$sql);
-
+        $row = mysqli_fetch_assoc($result);
         if($result){
             $num=mysqli_num_rows($result);
             if($num>0){
                 $login=1;
-                session_start();
                 $_SESSION['Username']=$usern;
                 header('location:index.php');
             }else{
@@ -66,13 +63,6 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
     <!--Login-->
     <br>
     <br>
-    <?php
-    if($login){
-        echo '<div class="alert alert-success" role="alert">
-        <strong>Đăng nhập thành công!</strong>
-      </div>';
-    }
-    ?>
     <?php
     if($invalid){
         echo '<div class="alert alert-danger" role="alert">

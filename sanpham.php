@@ -1,6 +1,5 @@
 <?php
-$con = mysqli_connect('localhost', 'root');
-mysqli_select_db($con, 'webbanhangphp');
+include('includes/connectdb.php');
 ?>
 
 <!DOCTYPE html>
@@ -74,11 +73,12 @@ mysqli_select_db($con, 'webbanhangphp');
                     search_sp()
                     ?>
                 </div>
+                <br>
             </div>
             <div class="col-2 text-center">
                 <h4>LOẠI SẢN PHẨM</h4>
                 <div class="list-group">
-                    <?php getLSPnav() ?>
+                    <?php getLSPnav(); ?>
                 </div>
                 <br>
                 <h4>HÃNG SẢN XUẤT</h4>

@@ -56,7 +56,7 @@ function getSPall()
     //điều kiện
     if (!isset($_GET['loaisanpham'])) {
         if (!isset($_GET['hangsanxuat'])) {
-            $sql = "SELECT * FROM sanpham ORDER BY rand()";
+            $sql = "SELECT * FROM sanpham ORDER BY idSP ASC limit 0,15";
             $rs = mysqli_query($con, $sql);
             while ($row_data = mysqli_fetch_assoc($rs)) {
                 $idsp = $row_data['idSP'];
@@ -67,14 +67,14 @@ function getSPall()
                 $noidung = $row_data['NoiDung'];
                 $idlsp = $row_data['idLSP'];
                 echo "<div class='card' style='width:200px; margin-left: 10px; margin-top:10px;'>
-            <img class='card-img-top' src='./Admin/products_image/$hinhsp' alt='Card image' style='width:100%; height:45%; margin-top: 10px;'>
-            <div class='card-body'>
-                <h4 class='card-title' style='color: red;'>$tensp</h4>
-                <p class='card-text'>Giá: $giasp $</p>
-            </div>
-            <a href='chitietsanpham.php?idsp=$idsp?idlsp=$idlsp?idhsx=$idhsx' class='btn btn-secondary' style='margin-top: 10px; margin-bottom:10px'>Chi tiết sản phẩm</a>
-            <a href='' class='btn btn-primary' style='margin-top: 10px; margin-bottom:10px'>Thêm vào giỏ</a>
-        </div>";
+                        <img class='card-img-top' src='./Admin/products_image/$hinhsp' alt='Card image' style='width:100%; height:45%; margin-top: 10px;'>
+                        <div class='card-body'>
+                            <h4 class='card-title' style='color: red;'>$tensp</h4>
+                            <p class='card-text'>Giá: $giasp $</p>
+                        </div>
+                        <a href='chitietsanpham.php?idsp=$idsp?idlsp=$idlsp?idhsx=$idhsx' class='btn btn-secondary' style='margin-top: 10px; margin-bottom:10px'>Chi tiết sản phẩm</a>
+                        <a href='' class='btn btn-primary' style='margin-top: 10px; margin-bottom:10px'>Thêm vào giỏ</a>
+                    </div>";
             }
         }
     }
@@ -201,7 +201,7 @@ function product_details()
                     $tenlsp = $row_data['TenLSP'];
                     $tenhsx = $row_data['TenNSX'];
                     $soluongton = $row_data['Soluong'];
-                    echo "<form class='py-5' action='includes/addcart.php?idsp=$idsp' method='post'>
+                    echo "<form class='py-5' action='includes/cart.php?idsp=$idsp' method='post'>
                     <div class='container px-4 px-lg-5 my-5'>
                         <div class='row gx-4 gx-lg-5 align-items-center'>
                             <div class='col-md-6'><img class='card-img-top mb-5 mb-md-0' src='./Admin/products_image/$hinhsp' alt='...' /></div>
