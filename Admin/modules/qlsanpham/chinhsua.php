@@ -49,27 +49,27 @@ if (isset($_POST['submit'])) {
         <form method="post">
             <div class="form-group">
                 <label for="exampleInputEmail1">Tên sản phẩm</label>
-                <input type="text" class="form-control" name="TenSP" value=<?php echo $name; ?>>
+                <input type="text" class="form-control" name="TenSP" value="<?php echo $name; ?>">
             </div>
             <div class="form-group">
                 <label for="exampleInputPassword1">Hình sản phẩm</label>
-                <input type="text" class="form-control" name="HinhSP" value=<?php echo $pic; ?>>
+                <input type="text" class="form-control" name="HinhSP" value="<?php echo $pic; ?>">
             </div>
             <div class="form-group">
                 <label for="exampleInputPassword1">Giá tiền</label>
-                <input type="text" class="form-control" name="GiaSP" value=<?php echo $price; ?>>
+                <input type="text" class="form-control" name="GiaSP" value="<?php echo $price; ?>">
             </div>
             <div class="form-group">
                 <label for="exampleInputPassword1">Hãng sản xuất</label>
-                <input type="text" class="form-control" name="idHSX" value=<?php echo $nsx; ?>>
+                <input type="text" class="form-control" name="idHSX" value="<?php echo $nsx; ?>">
             </div>
             <div class="form-group">
                 <label for="exampleInputPassword1">Mô tả</label>
-                <input type="text" class="form-control" name="NoiDung" value=<?php echo $info; ?>>
+                <input type="text" class="form-control" name="NoiDung" value="<?php echo $info; ?>">
             </div>
             <div class="form-group">
                 <label for="exampleInputPassword1">idLSP</label>
-                <input type="text" class="form-control" name="idLSP" value=<?php echo $idlsp; ?>>
+                <input type="text" class="form-control" name="idLSP" value="<?php echo $idlsp; ?>">
             </div>
             <div class="d-flex justify-content-between bg-white mb-3" style="margin-top: 10px;">
                 <div class="p-2 bg-white"><button class="btn btn-secondary"><a href="#" onclick="history.back();" class="text-light">Trở về</a></button></div>

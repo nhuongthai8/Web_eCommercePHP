@@ -43,15 +43,15 @@
         <form method="post">
             <div class="form-group">
                 <label for="exampleInputEmail1">Username</label>
-                <input type="text" class="form-control" name="username" value=<?php echo$name;?>>
+                <input type="text" class="form-control" name="username" value="<?php echo$name;?>">
             </div>
             <div class="form-group">
                 <label for="exampleInputPassword1">Password</label>
-                <input type="password" class="form-control" name="password" value=<?php echo$pass;?>>
+                <input type="password" class="form-control" name="password" value="<?php echo$pass;?>">
             </div>
             <div class="form-group">
                 <label for="exampleInputPassword1">Email</label>
-                <input type="email" class="form-control" aria-describedby="emailHelp" name="email" value=<?php echo$mail;?>>
+                <input type="email" class="form-control" aria-describedby="emailHelp" name="email" value="<?php echo$mail;?>">
             </div>
             <button type="submit" name="submit" class="btn btn-primary" style="margin-top:10px">Chỉnh sửa</button>
         </form>

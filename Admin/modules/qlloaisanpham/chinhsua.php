@@ -41,11 +41,11 @@ if (isset($_POST['submit'])) {
         <form method="post">
             <div class="form-group">
                 <label for="exampleInputEmail1">Tên loại sản phẩm</label>
-                <input type="text" class="form-control" name="TenLSP" value=<?php echo $name; ?>>
+                <input type="text" class="form-control" name="TenLSP" value="<?php echo $name; ?>">
             </div>
             <div class="form-group">
                 <label for="exampleInputPassword1">Hình ảnh</label>
-                <input type="text" class="form-control" name="HinhLSP" value=<?php echo $pic; ?>>
+                <input type="text" class="form-control" name="HinhLSP" value="<?php echo $pic; ?>">
             </div>
             <div class="d-flex justify-content-between bg-white mb-3" style="margin-top: 10px;">
                 <div class="p-2 bg-white"><button class="btn btn-secondary"><a href="#" onclick="history.back();" class="text-light">Trở về</a></button></div>

@@ -158,8 +158,15 @@ if (empty($_SESSION['cart'])) {
 
                     <form class="d-flex justify-content-end align-items-center" action="includes/cart.php" method="POST">
                         <button type="submit" class="btn btn-primary btn-lg me-2" name="continue_shopping">Tiếp tục mua</button>
-                        <a href="./checkout.php" class="btn btn-success btn-lg">Thanh Toán</a>
+                        <a href="./checkout.php" class="btn btn-success btn-lg me-2">Thanh Toán</a>
+
+                        <!-- PayPal button code -->
+                        <div id="paypal-button-container"></div>
                     </form>
+
+
+
+
 
                 </div>
             </div>
@@ -285,6 +292,44 @@ if (empty($_SESSION['cart'])) {
         <!-- Section: Links  -->
     </footer>
 
+    <script src="https://www.paypal.com/sdk/js?client-id=AR8BbUycnhf6ELgt8GTMzhRK5aiDI5Fvr8M6EEbg3l084xID7f_t5B2K_nqZ4huqe1eRJ6HlGlTq1wqd"></script>
+    <script>
+        paypal.Buttons({
+            createOrder: function(data, actions) {
+                // Set up the transaction
+                return actions.order.create({
+                    purchase_units: [{
+                        description: 'Your order',
+                        amount: {
+                            value: '<?php echo calculate_total_price(); ?>' // pass the total amount to PayPal
+                        }
+                    }]
+                });
+            },
+            onApprove: function(data, actions) {
+                // Capture the funds from the transaction
+                return actions.order.capture().then(function(details) {
+                    // Call your server to save the transaction
+                    return fetch('/paypal-transaction-complete', {
+                        method: 'post',
+                        headers: {
+                            'content-type': 'application/json'
+                        },
+                        body: JSON.stringify({
+                            orderID: data.orderID
+                        })
+                    }).then(function(response) {
+                        // Display a success message
+                        alert('Payment successful!');
+                        // Redirect to checkout.php after payment completion
+                        window.location.href = './checkout.php';
+                    });
+                });
+            }
+        }).render('#paypal-button-container');
+    </script>
+
+    <!-- End of PayPal button code -->
 
 </body>
 

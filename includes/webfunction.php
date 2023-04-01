@@ -56,7 +56,7 @@ function getSPall()
     //điều kiện
     if (!isset($_GET['loaisanpham'])) {
         if (!isset($_GET['hangsanxuat'])) {
-            $sql = "SELECT * FROM sanpham ORDER BY idSP ASC limit 0,15";
+            $sql = "SELECT * FROM sanpham ORDER BY idSP ASC";
             $rs = mysqli_query($con, $sql);
             while ($row_data = mysqli_fetch_assoc($rs)) {
                 $idsp = $row_data['idSP'];
@@ -72,7 +72,7 @@ function getSPall()
                             <h4 class='card-title' style='color: red;'>$tensp</h4>
                             <p class='card-text'>Giá: $giasp $</p>
                         </div>
-                        <a href='chitietsanpham.php?idsp=$idsp?idlsp=$idlsp?idhsx=$idhsx' class='btn btn-secondary' style='margin-top: 10px; margin-bottom:10px'>Chi tiết sản phẩm</a>
+                        <a href='chitietsanpham.php?idsp=$idsp&?idlsp=$idlsp&?idhsx=$idhsx' class='btn btn-secondary' style='margin-top: 10px; margin-bottom:10px'>Chi tiết sản phẩm</a>
                         <a href='' class='btn btn-primary' style='margin-top: 10px; margin-bottom:10px'>Thêm vào giỏ</a>
                     </div>";
             }
@@ -224,7 +224,6 @@ function product_details()
                         </div>
                     </div>
                 </form>";
-                    related_products();
                 }
             }
         }
@@ -241,31 +240,37 @@ function related_products()
         $sql = "SELECT * FROM sanpham WHERE idLSP ='$cate_id' and idSP != '$product_id' LIMIT 6";
         $rs = mysqli_query($con, $sql);
         if ($rs) {
-            echo "<h3>Related products</h3>";
-            echo "<div class='row'>";
-            while ($row_data = mysqli_fetch_assoc($rs)) {
-                $idsp = $row_data['idSP'];
-                $tensp = $row_data['TenSP'];
-                $hinhsp = $row_data['HinhSP'];
-                $giasp = $row_data['GiaSP'];
-                echo "
-                <div class='col mb-4'>
-                    <div class='card h-100'>
-                        <img class='card-img-top' src='./Admin/products_image/$hinhsp' alt='...' style='width:100%; height:45%;'/>
-                        <div class='card-body p-4'>
-                            <div class='text-center'>
-                                <h5 class='fw-bolder'>$tensp</h5>
-                                $giasp
+            if (mysqli_num_rows($rs) > 0) {
+                echo "<h3>Related products</h3>";
+                echo "<div class='row'>";
+                while ($row_data = mysqli_fetch_assoc($rs)) {
+                    $idsp = $row_data['idSP'];
+                    $tensp = $row_data['TenSP'];
+                    $hinhsp = $row_data['HinhSP'];
+                    $giasp = $row_data['GiaSP'];
+                    echo "
+                    <div class='col mb-4'>
+                        <div class='card h-100'>
+                            <img class='card-img-top' src='./Admin/products_image/$hinhsp' alt='...' style='width:100%; height:45%;'/>
+                            <div class='card-body p-4'>
+                                <div class='text-center'>
+                                    <h5 class='fw-bolder'>$tensp</h5>
+                                    $giasp
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+                            <div class='card-footer p-4 pt-0 border-top-0 bg-transparent'>
+                                <div class='text-center'><a class='btn btn-outline-dark mt-auto' href='#'>View options</a></div>
                             </div>
                         </div>
-                        <!-- Product actions-->
-                        <div class='card-footer p-4 pt-0 border-top-0 bg-transparent'>
-                            <div class='text-center'><a class='btn btn-outline-dark mt-auto' href='#'>View options</a></div>
-                        </div>
-                    </div>
-                </div>";
+                    </div>";
+                }
+                echo "</div>";
+            } else {
+                echo "No related products found.";
             }
-            echo "</div>";
+        } else {
+            echo "Error: " . mysqli_error($con);
         }
     }
 }

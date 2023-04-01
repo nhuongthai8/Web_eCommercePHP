@@ -45,19 +45,19 @@ if (isset($_POST['submit'])) {
         <form method="post">
             <div class="form-group">
                 <label for="exampleInputEmail1">Họ tên</label>
-                <input type="text" class="form-control" name="HoTen" value=<?php echo $name; ?>>
+                <input type="text" class="form-control" name="HoTen" value="<?php echo $name; ?>">
             </div>
             <div class="form-group">
                 <label for="exampleInputPassword1">Username</label>
-                <input type="text" class="form-control" name="Username" value=<?php echo $usern; ?>>
+                <input type="text" class="form-control" name="Username" value="<?php echo $usern; ?>">
             </div>
             <div class="form-group">
                 <label for="exampleInputPassword1">Password</label>
-                <input type="text" class="form-control" name="Password" value=<?php echo $pass; ?>>
+                <input type="text" class="form-control" name="Password" value="<?php echo $pass; ?>">
             </div>
             <div class="form-group">
                 <label for="exampleInputPassword1">Email</label>
-                <input type="mail" class="form-control" name="Email" value=<?php echo $mail; ?>>
+                <input type="mail" class="form-control" name="Email" value="<?php echo $mail; ?>">
             </div>
             <div class="d-flex justify-content-between bg-white mb-3" style="margin-top: 10px;">
                 <div class="p-2 bg-white"><button class="btn btn-secondary"><a href="#" onclick="history.back();" class="text-light">Trở về</a></button></div>

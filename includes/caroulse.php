@@ -11,22 +11,22 @@
             <div class="carousel-item active">
                 <img src="images/bg1.jpg" alt="Los Angeles" class="d-block img-thumbnail" style="width:100%">
                 <div class="carousel-caption">
-                    <h3>Los Angeles</h3>
-                    <p>We had such a great time in LA!</p>
+                    <h3>Laptop</h3>
+                    <p>Browse our wide selection of laptops and find the perfect one for you.</p>
                 </div>
             </div>
             <div class="carousel-item">
                 <img src="images/bg2.jpg" alt="Chicago" class="d-block img-thumbnail" style="width:100%">
                 <div class="carousel-caption">
-                    <h3>Chicago</h3>
-                    <p>Thank you, Chicago!</p>
+                    <h3>Accessories</h3>
+                    <p>Shop our collection of accessories and enhance your technology experience.</p>
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="images/bg3.jpg" alt="New York" class="d-block img-thumbnail" style="width:100%">
+                <img src="images/bg3.png" alt="New York" class="d-block img-thumbnail" style="width:100%">
                 <div class="carousel-caption">
-                    <h3>New York</h3>
-                    <p>We love the Big Apple!</p>
+                    <h3>Smart Phone</h3>
+                    <p>Stay connected on-the-go with our selection of smartphones from top brands.</p>
                 </div>
             </div>
         </div>
