@@ -51,20 +51,21 @@ if (empty($_SESSION['cart'])) {
                     <?php
                     if (!isset($_SESSION['Username'])) {
                         echo "<li class='nav-item'>
-                            <a class='nav-link' href='dangnhap.php'>ĐĂNG NHẬP</a>
-                        </li>
-                        <li class='nav-item'>
-                            <a class='nav-link' href='dangky.php'>ĐĂNG KÝ</a>
-                        </li>";
+                        <a class='nav-link' href='dangnhap.php'>ĐĂNG NHẬP</a>
+                    </li>
+                    <li class='nav-item'>
+                        <a class='nav-link' href='dangky.php'>ĐĂNG KÝ</a>
+                    </li>";
                     } else {
                         echo "<li class='nav-item dropdown'>
-                        <a class='nav-link dropdown-toggle' href='#' role='button' data-bs-toggle='dropdown'>" . $_SESSION['Username'] . "</a>
-                        <ul class='dropdown-menu'>
-                        <li><a class='dropdown-item' href='tintuc.php'>Chỉnh sửa thông tin</a></li>
-                        <li><hr class='dropdown-divider'></li>
-                        <li><a class='dropdown-item' href='./includes/dangxuat.php'>Đăng xuất</a></li>
-                        </ul>
-                    </li>";
+                    <a class='nav-link dropdown-toggle' href='#' role='button' data-bs-toggle='dropdown'>XIN CHÀO " . strtoupper($_SESSION['Username']) . "</a>
+                    <ul class='dropdown-menu'>
+                      <li><a class='dropdown-item' href='thongtinkhachhang.php'>Thông tin cá nhân</a></li>
+                      <li><a class='dropdown-item' href='doimatkhau.php'>Đổi mật khẩu</a></li>
+                      <li><hr class='dropdown-divider'></li>
+                      <li><a class='dropdown-item' href='./includes/dangxuat.php'>Đăng xuất</a></li>
+                    </ul>
+                  </li>";
                     }
                     ?>
                     <li class="nav-item">

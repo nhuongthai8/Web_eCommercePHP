@@ -14,6 +14,9 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
             if($num>0){
                 $login=1;
                 $_SESSION['Username']=$usern;
+                $_SESSION['Password'] = $row['Password'];
+                $_SESSION['Email'] =$row['Email'];
+                $_SESSION['HoTen'] =$row['HoTen'];
                 header('location:index.php');
             }else{
                 $invalid=1;

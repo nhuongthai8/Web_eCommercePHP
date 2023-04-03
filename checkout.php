@@ -4,7 +4,7 @@ session_start();
 if(!isset($_SESSION['Username'])){
     echo '<script>alert("Vui lòng đăng nhập để thanh toán!"); window.location.href = "./dangnhap.php";</script>';
 }
-$usern = $_SESSION['Username'];
+$usern = isset($_SESSION['Username']) ? $_SESSION['Username'] : '';
 $code_cart = rand(0,9999);
 $insert_cart = "insert into giohang(Username, cart_code, cart_status) values ('".$usern."','".$code_cart."',1)";
 $cart_query = mysqli_query($con,$insert_cart);

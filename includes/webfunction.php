@@ -38,15 +38,15 @@ function getSPmoi()
         $idhsx = $row_data['idHSX'];
         $noidung = $row_data['NoiDung'];
         $idlsp = $row_data['idLSP'];
-        echo "<div class='card' style='width:200px; margin-left: 10px;'>
-            <img class='card-img-top' src='./Admin/products_image/$hinhsp' alt='Card image' style='width:100%; height:50%; margin-top: 10px;'>
-            <div class='card-body'>
-                <h4 class='card-title' style='color: red;'>$tensp</h4>
-                <p class='card-text'>Giá: $giasp $</p>
-            </div>
-            <a href='chitietsanpham.php?idsp=$idsp?idlsp=$idlsp?idhsx=$idhsx' class='btn btn-secondary' style='margin-top: 10px; margin-bottom:10px'>Chi tiết sản phẩm</a>
-            <a href='' class='btn btn-primary' style='margin-top: 10px; margin-bottom:10px'>Thêm vào giỏ</a>
-        </div>";
+        echo "<form class='card' style='width:200px; margin-left: 10px; margin-top:10px;' action='includes/cart.php?idsp=$idsp' method='post'>
+        <img class='card-img-top' src='./Admin/products_image/$hinhsp' alt='Card image' style='width:100%; height:45%; margin-top: 10px;'>
+        <div class='card-body'>
+            <h4 class='card-title' style='color: red;'>$tensp</h4>
+            <p class='card-text'>Giá: $giasp $</p>
+        </div>
+        <a href='chitietsanpham.php?idsp=$idsp&?idlsp=$idlsp&?idhsx=$idhsx' class='btn btn-secondary' style='margin-top: 10px; margin-bottom:10px'>Chi tiết sản phẩm</a>
+        <input class='btn btn-primary' type='submit' value='Thêm vào giỏ' name='addtocart' style='margin-top: 10px; margin-bottom:10px'>
+    </form>";
     }
 }
 //lấy tất cả sản phẩm //sanpham.php
@@ -66,15 +66,15 @@ function getSPall()
                 $idhsx = $row_data['idHSX'];
                 $noidung = $row_data['NoiDung'];
                 $idlsp = $row_data['idLSP'];
-                echo "<div class='card' style='width:200px; margin-left: 10px; margin-top:10px;'>
-                        <img class='card-img-top' src='./Admin/products_image/$hinhsp' alt='Card image' style='width:100%; height:45%; margin-top: 10px;'>
-                        <div class='card-body'>
-                            <h4 class='card-title' style='color: red;'>$tensp</h4>
-                            <p class='card-text'>Giá: $giasp $</p>
-                        </div>
-                        <a href='chitietsanpham.php?idsp=$idsp&?idlsp=$idlsp&?idhsx=$idhsx' class='btn btn-secondary' style='margin-top: 10px; margin-bottom:10px'>Chi tiết sản phẩm</a>
-                        <a href='' class='btn btn-primary' style='margin-top: 10px; margin-bottom:10px'>Thêm vào giỏ</a>
-                    </div>";
+                echo "<form class='card' style='width:200px; margin-left: 10px; margin-top:10px;' action='includes/cart.php?idsp=$idsp' method='post'>
+                <img class='card-img-top' src='./Admin/products_image/$hinhsp' alt='Card image' style='width:100%; height:45%; margin-top: 10px;'>
+                <div class='card-body'>
+                    <h4 class='card-title' style='color: red;'>$tensp</h4>
+                    <p class='card-text'>Giá: $giasp $</p>
+                </div>
+                <a href='chitietsanpham.php?idsp=$idsp&?idlsp=$idlsp&?idhsx=$idhsx' class='btn btn-secondary' style='margin-top: 10px; margin-bottom:10px'>Chi tiết sản phẩm</a>
+                <input class='btn btn-primary' type='submit' value='Thêm vào giỏ' name='addtocart' style='margin-top: 10px; margin-bottom:10px'>
+            </form>";
             }
         }
     }
@@ -100,15 +100,15 @@ function getSPtheoloai()
             $idhsx = $row_data['idHSX'];
             $noidung = $row_data['NoiDung'];
             $idlsp = $row_data['idLSP'];
-            echo "<div class='card' style='width:200px; margin-left: 10px; margin-top:10px;'>
-            <img class='card-img-top' src='./Admin/products_image/$hinhsp' alt='Card image' style='width:100%; height:50%; margin-top: 10px;'>
+            echo "<form class='card' style='width:200px; margin-left: 10px; margin-top:10px;' action='includes/cart.php?idsp=$idsp' method='post'>
+            <img class='card-img-top' src='./Admin/products_image/$hinhsp' alt='Card image' style='width:100%; height:45%; margin-top: 10px;'>
             <div class='card-body'>
                 <h4 class='card-title' style='color: red;'>$tensp</h4>
                 <p class='card-text'>Giá: $giasp $</p>
             </div>
-            <a href='chitietsanpham.php?idsp=$idsp?idlsp=$idlsp?idhsx=$idhsx' class='btn btn-secondary' style='margin-top: 10px; margin-bottom:10px'>Chi tiết sản phẩm</a>
-            <a href='' class='btn btn-primary' style='margin-top: 10px; margin-bottom:10px'>Thêm vào giỏ</a>
-        </div>";
+            <a href='chitietsanpham.php?idsp=$idsp&?idlsp=$idlsp&?idhsx=$idhsx' class='btn btn-secondary' style='margin-top: 10px; margin-bottom:10px'>Chi tiết sản phẩm</a>
+            <input class='btn btn-primary' type='submit' value='Thêm vào giỏ' name='addtocart' style='margin-top: 10px; margin-bottom:10px'>
+        </form>";
         }
     }
 }
@@ -133,15 +133,15 @@ function getSPtheohang()
             $idhsx = $row_data['idHSX'];
             $noidung = $row_data['NoiDung'];
             $idlsp = $row_data['idLSP'];
-            echo "<div class='card' style='width:200px; margin-left: 10px; margin-top:10px;'>
-            <img class='card-img-top' src='./Admin/products_image/$hinhsp' alt='Card image' style='width:100%; height:50%; margin-top: 10px;'>
+            echo "<form class='card' style='width:200px; margin-left: 10px; margin-top:10px;' action='includes/cart.php?idsp=$idsp' method='post'>
+            <img class='card-img-top' src='./Admin/products_image/$hinhsp' alt='Card image' style='width:100%; height:45%; margin-top: 10px;'>
             <div class='card-body'>
                 <h4 class='card-title' style='color: red;'>$tensp</h4>
                 <p class='card-text'>Giá: $giasp $</p>
             </div>
-            <a href='chitietsanpham.php?idsp=$idsp?idlsp=$idlsp?idhsx=$idhsx' class='btn btn-secondary' style='margin-top: 10px; margin-bottom:10px'>Chi tiết sản phẩm</a>
-            <a href='' class='btn btn-primary' style='margin-top: 10px; margin-bottom:10px'>Thêm vào giỏ</a>
-        </div>";
+            <a href='chitietsanpham.php?idsp=$idsp&?idlsp=$idlsp&?idhsx=$idhsx' class='btn btn-secondary' style='margin-top: 10px; margin-bottom:10px'>Chi tiết sản phẩm</a>
+            <input class='btn btn-primary' type='submit' value='Thêm vào giỏ' name='addtocart' style='margin-top: 10px; margin-bottom:10px'>
+        </form>";
         }
     }
 }
@@ -165,15 +165,15 @@ function search_sp()
             $idhsx = $row_data['idHSX'];
             $noidung = $row_data['NoiDung'];
             $idlsp = $row_data['idLSP'];
-            echo "<div class='card' style='width:200px; margin-left: 10px; margin-top:10px;'>
-            <img class='card-img-top' src='./Admin/products_image/$hinhsp' alt='Card image' style='width:100%; height:50%; margin-top: 10px;'>
+            echo "<form class='card' style='width:200px; margin-left: 10px; margin-top:10px;' action='includes/cart.php?idsp=$idsp' method='post'>
+            <img class='card-img-top' src='./Admin/products_image/$hinhsp' alt='Card image' style='width:100%; height:45%; margin-top: 10px;'>
             <div class='card-body'>
                 <h4 class='card-title' style='color: red;'>$tensp</h4>
                 <p class='card-text'>Giá: $giasp $</p>
             </div>
-            <a href='chitietsanpham.php?idsp=$idsp?idlsp=$idlsp?idhsx=$idhsx' class='btn btn-secondary' style='margin-top: 10px; margin-bottom:10px'>Chi tiết sản phẩm</a>
-            <a href='' class='btn btn-primary' style='margin-top: 10px; margin-bottom:10px'>Thêm vào giỏ</a>
-        </div>";
+            <a href='chitietsanpham.php?idsp=$idsp&?idlsp=$idlsp&?idhsx=$idhsx' class='btn btn-secondary' style='margin-top: 10px; margin-bottom:10px'>Chi tiết sản phẩm</a>
+            <input class='btn btn-primary' type='submit' value='Thêm vào giỏ' name='addtocart' style='margin-top: 10px; margin-bottom:10px'>
+        </form>";
         }
     }
 }
