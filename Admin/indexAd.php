@@ -20,7 +20,7 @@ include("yeucauloginAd.php")
 <body>
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="indexAd.php">Company's Logo Here</a>
+            <a class="navbar-brand" href="indexAd.php">Teckie</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -47,6 +47,18 @@ include("yeucauloginAd.php")
                     <li class="nav-item">
                         <a class="nav-link" href="indexAd.php?lietkead">QL ADMIN</a>
                     </li>
+                </ul>
+                <ul class="navbar-nav justify-content-end">
+                    <?php
+                    if (isset($_SESSION['username'])) {
+                        echo "<li class='nav-item'>
+                        <a class='nav-link' href='indexAd.php'>XIN CHÀO " . strtoupper($_SESSION['username']) . "</a>
+                    </li>
+                    <li class='nav-item'>
+                        <a class='nav-link' href='indexAd.php?dangxuat'>ĐĂNG XUẤT</a>
+                    </li>";
+                    }
+                    ?>
                 </ul>
             </div>
         </div>
@@ -88,6 +100,11 @@ include("yeucauloginAd.php")
         if (isset($_GET['lietkead'])) {
             echo '<h1 style="text-align: center; margin-top: 20px;">DANH SÁCH ADMIN</h1>';
             include("./modules/qltaikhoanadmin/lietkeAd.php");
+        }
+        ?>
+        <?php
+        if (isset($_GET['dangxuat'])) {
+            include("./dangxuatAd.php");
         }
         ?>
     </div>

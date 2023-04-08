@@ -293,7 +293,7 @@ if (empty($_SESSION['cart'])) {
         <!-- Section: Links  -->
     </footer>
 
-    <script src="https://www.paypal.com/sdk/js?client-id=AR8BbUycnhf6ELgt8GTMzhRK5aiDI5Fvr8M6EEbg3l084xID7f_t5B2K_nqZ4huqe1eRJ6HlGlTq1wqd"></script>
+    <script src="https://www.paypal.com/sdk/js?client-id=Afxq5-2JUoCcv_gT_ORtm9BwQ51m5s4FHS-LhALGRDTBKeDuOpjokBw7xv1ekqYyWaFpusY8-kvU7pkp"></script>
     <script>
         paypal.Buttons({
             createOrder: function(data, actions) {

@@ -6,14 +6,14 @@ session_start();
 
 <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
     <div class="container-fluid">
-        <a class="navbar-brand" href="index.php">Company's Logo Here</a>
+        <a class="navbar-brand" href="index.php">Teckie</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="mynavbar">
             <ul class="navbar-nav me-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="index.php">TRANG CHỦ</a>
+                    <a class="nav-link" href="index.php">TRANG CHỦ</a> 
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="tintuc.php">TIN TỨC</a>
@@ -42,6 +42,7 @@ session_start();
                     <a class='nav-link dropdown-toggle' href='#' role='button' data-bs-toggle='dropdown'>XIN CHÀO ".strtoupper($_SESSION['Username'])."</a>
                     <ul class='dropdown-menu'>
                       <li><a class='dropdown-item' href='thongtinkhachhang.php'>Thông tin cá nhân</a></li>
+                      <li><a class='dropdown-item' href='404.php'>Lịch sử mua hàng</a></li>
                       <li><a class='dropdown-item' href='doimatkhau.php'>Đổi mật khẩu</a></li>
                       <li><hr class='dropdown-divider'></li>
                       <li><a class='dropdown-item' href='./includes/dangxuat.php'>Đăng xuất</a></li>
